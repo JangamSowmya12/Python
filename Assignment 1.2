@@ -1,0 +1,15 @@
+#Program to print number of prime numbers in a list
+list= [1,2, 11,100,64,86,92,73,59,7, 14, 5, 23, 10, 13, 19, 3]
+prime_count=0
+for i in list:
+    # Check if the number is greater than 1
+    if i > 1:
+        # Check for factors other than 1 and itself
+        for j in range(2, i):
+            if (i % j) == 0:
+                break
+        else:
+            # If no factors found, the number is prime
+            prime_count += 1
+# Print the count of prime numbers
+print("Number of prime numbers:", prime_count)
